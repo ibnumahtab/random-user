@@ -12,23 +12,34 @@
 </head>
 
 <body>
+    <!-- Heading -->
     <h1 class="text-5xl text-center text-green-500 my-10">Random User</h1>
-    <div class="p-20 shadow-2xl rounded w-4/5 mx-auto">
+    <!-- Container -->
+    <div class="p-20 shadow-2xl rounded w-4/5 mx-auto text-center">
+        <!-- User Image -->
         <img class="rounded-full w-2/12 mx-auto" src="./ibnumahtab.jpeg" alt="ibnumahtab">
-        <h4 class="text-center py-5 text-2xl"><span>Name:</span> <span>Ibnu Mahtab Hussain</span></h4>
+        <!-- User Name -->
+        <h4 class="py-5 text-2xl">
+            <span id="name">Ibnu Mahtab Hussain</span>
+        </h4>
+        <!-- User info -->
+        <p id="info"></p>
+        <!-- Info Icons -->
         <ul class="flex space-x-10 justify-center text-4xl py-5 text-blue-500 cursor-pointer">
-            <li><ion-icon name="person-outline"></ion-icon></li>
-            <li><ion-icon name="mail-outline"></ion-icon></li>
-            <li><ion-icon name="call-outline"></ion-icon></li>
-            <li><ion-icon name="grid-outline"></ion-icon></li>
-            <li><ion-icon name="calendar-outline"></ion-icon></li>
-            <li><ion-icon name="male-female-outline"></ion-icon></li>
+            <li id="email" class="hover:text-blue-900"><ion-icon name="mail-outline"></ion-icon></li>
+            <li id="call" class="hover:text-blue-900"><ion-icon name="call-outline"></ion-icon></li>
+            <li id="age" class="hover:text-blue-900"><ion-icon name="grid-outline"></ion-icon></li>
+            <li id="dob" class="hover:text-blue-900"><ion-icon name="calendar-outline"></ion-icon></li>
+            <li id="gender" class="hover:text-blue-900"><ion-icon name="male-female-outline"></ion-icon></li>
         </ul>
-        <button id="nextBtn" class="border-2 border-green-600 rounded-lg px-3 py-2 text-green-600 cursor-pointer hover:bg-green-600 hover:text-green-200 block mx-auto mt-3">Next User</button>
+        <!-- Next Button -->
+        <button onclick="loadUser()" class="border-2 border-green-600 rounded-lg px-3 py-2 text-green-600 cursor-pointer hover:bg-green-600 hover:text-green-200 block mx-auto mt-3">Next User</button>
     </div>
-
+    
+    <!-- IonIcons JS Files -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Main JS Files -->
     <script src="./random-user.js"></script>
 </body>
 
