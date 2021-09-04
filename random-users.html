@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random User Name</title>
+
+    <!-- Tailwind CSS -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1 class="text-5xl text-center text-green-500 my-10">Random User</h1>
+    <div class="p-20 shadow-2xl rounded w-4/5 mx-auto">
+        <img class="rounded-full w-2/12 mx-auto" src="./ibnumahtab.jpeg" alt="ibnumahtab">
+        <h4 class="text-center py-5 text-2xl"><span>Name:</span> <span>Ibnu Mahtab Hussain</span></h4>
+        <ul class="flex space-x-10 justify-center text-4xl py-5 text-blue-500 cursor-pointer">
+            <li><ion-icon name="person-outline"></ion-icon></li>
+            <li><ion-icon name="mail-outline"></ion-icon></li>
+            <li><ion-icon name="call-outline"></ion-icon></li>
+            <li><ion-icon name="grid-outline"></ion-icon></li>
+            <li><ion-icon name="calendar-outline"></ion-icon></li>
+            <li><ion-icon name="male-female-outline"></ion-icon></li>
+        </ul>
+        <button id="nextBtn" class="border-2 border-green-600 rounded-lg px-3 py-2 text-green-600 cursor-pointer hover:bg-green-600 hover:text-green-200 block mx-auto mt-3">Next User</button>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./random-user.js"></script>
+</body>
+
+</html>
