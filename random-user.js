@@ -22,6 +22,7 @@ const displayUser = user => {
     globalObj = user;
     setInnerText('name', `${user.name.title} ${user.name.first} ${user.name.last}`);
     document.getElementById('user-image').setAttribute('src', `${user.picture.large}`);
+    document.getElementById('info').textContent = '';
 };
 
 // Set Inner Text
