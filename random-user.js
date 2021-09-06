@@ -7,6 +7,16 @@ let globalObj = {
         age: 23,
     },
     gender: 'Male',
+    location: {
+        country: 'Bangladesh',
+        city: 'Dhaka',
+        state: 'Mirpur',
+        street: {
+            name: 'Pallabi',
+            number: '04',
+        },
+        postcode: 1216,
+    },
 };
 
 // Load User Data
@@ -21,6 +31,7 @@ const loadUser = async () => {
 const displayUser = user => {
     globalObj = user;
     setInnerText('name', `${user.name.title} ${user.name.first} ${user.name.last}`);
+    setInnerText('address', `Country: ${user.location.country}, City: ${user.location.city}, State: ${user.location.state}, Street: ${user.location.street.name} ${user.location.street.number}, Post Code: ${user.location.postcode}, Time Zone: ${user.location.timezone.description} - ${user.location.timezone.offset}, Co-Ordinates: ${user.location.coordinates.latitude} - ${user.location.coordinates.longitude}`);
     document.getElementById('user-image').setAttribute('src', `${user.picture.large}`);
     document.getElementById('info').textContent = '';
 };
@@ -30,6 +41,9 @@ const setInnerText = (fieldID, setItem) => {
     const id = document.getElementById(fieldID);
     id.innerText = setItem;
 };
+
+// Showing My Default Info
+setInnerText('address', `Country: ${globalObj.location.country}, City: ${globalObj.location.city}, State: ${globalObj.location.state}, Street: ${globalObj.location.street.name} ${globalObj.location.street.number}, Post Code: ${globalObj.location.postcode}`);
 
 // Showing Others Info with Mouseover Event
 const mouseOverEvent = iconId => {
